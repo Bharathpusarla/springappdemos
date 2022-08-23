@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Something went wrong! </h1>
-<h2>Our Engineers are on it</h2>
+<h1>Please enter valid user id</h1>
 <a href="/">Go Home</a>
 </body>
 </html>
