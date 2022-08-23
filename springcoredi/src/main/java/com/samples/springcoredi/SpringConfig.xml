@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="emp" class="com.samples.springcoredi.Employee"
+		p:id="22" p:name="John">
+		<property name="address">
+			<bean class="com.samples.springcoredi.Address"
+				p:houseNumber="123" p:street="main street" p:city="NY" />
+		</property>
+	</bean>
+	<bean name="hospital" class="com.samples.springcoredi.Hospital">
+		<property name="name" value="Global Hospitals" />
+		<property name="departments">
+			<value>Casualty</value>
+		</property>
+	</bean>
+	<bean name="customer" class="com.samples.springcoredi.Customer"
+		p:id="37">
+		<property name="products">
+			<map>
+				<entry key="100" value="IPhone" />
+				<entry key="200" value="Laptop" />
+				<entry key="300" value="Mobile" />
+				<entry key="400" value="Mouse" />
+				<entry key="500" value="Keyboard" />
+			</map>
+		</property>
+	</bean>
+
+
+
+	<bean name="items" class="com.samples.springcoredi.Item"
+		p:id="101" p:name="puha" p:price="100" p:quantity="1" />
+
+	<bean name="shoppingcart"
+		class="com.samples.springcoredi.Shoppingcart" p:item-ref="items" />
+		
+		<bean name="patient" class="com.samples.springcoredi.Patient"
+		p:id="11" />
+		<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	
+		
+
+</beans> 
