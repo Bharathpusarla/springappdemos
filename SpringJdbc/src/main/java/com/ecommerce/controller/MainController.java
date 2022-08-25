@@ -29,7 +29,8 @@ public class MainController {
             public String listProducts(ModelMap map)
             {
                     List<EProduct> list= eproductDAO.getProducts();
-                 model.addAttribute("list",list);  
+                 ModelMap model = null;
+				model.addAttribute("list",list);  
                 return "listProducts";
             }
            }
