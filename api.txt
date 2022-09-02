@@ -1,0 +1,3 @@
+6d103da2ae6122d41fea5de91388f510
+
+http://api.weatherstack.com/current?access_key=6d103da2ae6122d41fea5de91388f510&query=New York
